@@ -11,7 +11,7 @@ neededSave = False
 
 def alter_tree_recursively(root, tag, attrib, value):
     if root.tag == tag:
-        if root.attrib[attrib] != value:
+        if root.attrib.get(attrib) != value:
             root.attrib[attrib] = value
             global neededSave
             neededSave = True
